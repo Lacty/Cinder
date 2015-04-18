@@ -1,6 +1,6 @@
 ## void drawColorCibe(Vec3f center, Vec3f size)
 
-namespace gl
+namespace cinder::gl
 
 - center‚ª•`‰æ‚·‚éCube‚Ì’†‰›
 
