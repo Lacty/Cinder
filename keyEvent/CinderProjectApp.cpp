@@ -19,11 +19,11 @@ private:
 public:
   void prepareSettings(Settings* setting) override;
 
-	void setup();
-	void mouseDown( MouseEvent event ) override;	
+  void setup();
+  void mouseDown( MouseEvent event ) override;	
   void keyDown(   KeyEvent   event)  override;
-	void update();
-	void draw();
+  void update();
+  void draw();
 };
 
 void CinderProjectApp::prepareSettings(Settings* setting) {
