@@ -1,3 +1,3 @@
 ## DivisionZ
 
-- Z‚ÅŠ„‚é
+- Zã§å‰²ã‚‹
