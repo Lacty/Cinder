@@ -27,12 +27,11 @@ void CommonApp::update()
 void CommonApp::draw()
 {
 	gl::clear();
-  ly::drawCube(Vec3f(int(WindowSize::Width) / 2, int(WindowSize::Height) / 2, 0),
-               Vec3f(50, 50, 50),
-               Color::white(),
-               Vec3f(0, 0, 0),
-               Vec3f(0, 0, 0),
-               Vec3f(1, 1, 1));
+  ly::drawCircle(getWindowSize() / 2, 50,
+                 0, Color::white(),
+                 Vec2f::zero(),
+                 Vec2f::zero(),
+                 Vec2f::one());
 }
 
 CINDER_APP_NATIVE( CommonApp, RendererGl )
