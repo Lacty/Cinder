@@ -8,6 +8,13 @@ namespace ly {
                 const Vec3f&  size,
                 const ColorA& color);
 
+  void drawCube(const Vec3f&  pos,
+                const Vec3f&  size,
+                const ColorA& color,
+                const Vec3f&  rotate,
+                const Vec3f&  translate,
+                const Vec3f&  scale);
+
   void drawLine(const Vec3f&  pos,
                 const Vec3f&  size,
                 const ColorA& color);

@@ -1,5 +1,6 @@
 
 #include "graph.h"
+#include "cinder/Matrix44.h"
 
 
 void ly::drawCube(const Vec3f&  pos,
@@ -10,9 +11,24 @@ void ly::drawCube(const Vec3f&  pos,
   gl::drawCube(pos, size);
 }
 
+void ly::drawCube(const Vec3f&  pos,
+                  const Vec3f&  size,
+                  const ColorA& color,
+                  const Vec3f&  rotate,
+                  const Vec3f&  translate,
+                  const Vec3f&  scale)
+{
+  gl::pushModelView();
+  gl::translate(pos);
+  gl::rotate(rotate);
+  gl::color(color);
+  gl::drawCube(translate, (size * scale));
+  gl::popModelView();
+}
+
 void ly::drawLine(const Vec3f&  pos,
-              const Vec3f&  size,
-              const ColorA& color)
+                  const Vec3f&  size,
+                  const ColorA& color)
 {
   gl::color(color);
   gl::drawLine(pos, size);
