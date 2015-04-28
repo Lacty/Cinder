@@ -1,0 +1,8 @@
+{
+    "object": 1.5,
+    "Player": {
+        "Speed": 1.5,
+        "HP": 100,
+        "Name": "rorikon"
+    }
+}
