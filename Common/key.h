@@ -21,7 +21,7 @@ public:
   void setKeyPress(int key_number);
   void setKeyPull(int key_number);
 
-  void popKey(int key_number);
+  void popKeyPress(int key_number);
 
   bool isPush(int key_number);
   bool isPress(int key_number);

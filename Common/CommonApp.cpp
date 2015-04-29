@@ -14,7 +14,7 @@ public:
     Key::get().setKeyPress(event.getCode());
   }
   void keyUp(KeyEvent event) {
-    Key::get().popKey(event.getCode());
+    Key::get().popKeyPress(event.getCode());
     Key::get().setKeyPull(event.getCode());
   }
 

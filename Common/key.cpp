@@ -22,7 +22,7 @@ void Key::setKeyPull(int key_number) {
   key_pull.emplace(key_number);
 }
 
-void Key::popKey(int key_number) {
+void Key::popKeyPress(int key_number) {
   key_press.erase(key_press.find(key_number));
 }
 
