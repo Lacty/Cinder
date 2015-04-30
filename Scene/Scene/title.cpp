@@ -1,6 +1,7 @@
 
 #include "title.h"
 #include "scene_mgr.h"
+#include "game_main.h"
 #include "MyLib/graph.h"
 #include "MyLib/key.h"
 
@@ -11,6 +12,10 @@ Scene(manager) {}
 void Title::update() {
   if (Key::get().isPush(KeyEvent::KEY_a)) {
     console() << "Title >> push 'A'" << std::endl;
+  }
+  if (Key::get().isPush(KeyEvent::KEY_w)) {
+    m_manager->shiftNextScene(std::make_shared<GameMain>(m_manager));
+    console() << "erro‚Ü‚¹‚ñI" << std::endl;
   }
 }
 

@@ -30,7 +30,6 @@ void SceneApp::setup() {
   setWindowSize(static_cast<int>(WindowSize::Width),
                 static_cast<int>(WindowSize::Height));
   Key::get();
-  scene.start();
 }
 
 void SceneApp::mouseDown(MouseEvent event) {}

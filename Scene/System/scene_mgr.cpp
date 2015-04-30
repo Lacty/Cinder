@@ -4,9 +4,8 @@
 #include "title.h"
 
 
-void SceneMgr::start() {
-  current_scene = std::make_shared<Title>(this);
-}
+SceneMgr::SceneMgr() :
+current_scene(std::make_shared<Title>(this)) {}
 
 void SceneMgr::update() {
   current_scene->update();

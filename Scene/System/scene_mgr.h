@@ -11,9 +11,7 @@ private:
 
 public:
 
-  SceneMgr() = default;
-
-  void start();
+  SceneMgr();
 
   void update();
   void draw();
