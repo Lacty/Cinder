@@ -13,6 +13,7 @@ Scene(manager) {}
 void GameMain::update() {
   if (Key::get().isPush(KeyEvent::KEY_d)) {
     m_manager->shiftNextScene(std::make_shared<Title>(m_manager));
+    //m_manager->shiftNextScene(new Title(m_manager));
   }
 }
 

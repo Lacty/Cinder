@@ -8,6 +8,7 @@ class Scene;
 class SceneMgr {
 private:
   std::shared_ptr<Scene> current_scene;
+  // Scene* current_scene;
 
 public:
 
@@ -17,4 +18,5 @@ public:
   void draw();
 
   void shiftNextScene(std::shared_ptr<Scene> next_scene);
+  //void shiftNextScene(Scene*);
 };

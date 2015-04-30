@@ -42,6 +42,7 @@ void SceneApp::draw() {
   // clear out the window with black
   gl::clear();
   scene.draw();
+  Key::get().flashInput();
 }
 
 CINDER_APP_NATIVE(SceneApp, RendererGl)

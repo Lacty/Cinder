@@ -9,6 +9,7 @@ class Title : public Scene {
 public:
 
   Title(SceneMgr*);
+  ~Title();
 
   void update();
   void draw();
