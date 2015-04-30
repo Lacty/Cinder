@@ -17,6 +17,8 @@ public:
 
   static Key& get();
 
+  void flashInput();
+
   void setKeyPush(int key_number);
   void setKeyPress(int key_number);
   void setKeyPull(int key_number);
