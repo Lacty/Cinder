@@ -3,8 +3,8 @@
 
 
 Mouse::Mouse() {
-  pos = ci::Vec2i::zero();
-  left = { false, false, false };
+  pos   = ci::Vec2i::zero();
+  left  = { false, false, false };
   right = { false, false, false };
 }
 

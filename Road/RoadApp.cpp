@@ -2,9 +2,13 @@
 #include "MyLib/common.h"
 #include "MyLib/key.h"
 #include "MyLib/mouse.h"
+#include "System/scene_mgr.h"
 
 
 class RoadApp : public AppNative {
+private:
+  SceneMgr scene;
+
 public:
   void setup();
 
@@ -37,15 +41,17 @@ void RoadApp::setup() {
   Key::get();
 }
 
-void RoadApp::update() {
-  if (Mouse::get().Left().isPress) {
-    console() << "press Left" << std::endl;
-  }
+void RoadApp::update()
+{
+  scene.update();
 }
 
 void RoadApp::draw() {
   // clear out the window with black
   gl::clear();
+
+  scene.draw();
+
   Mouse::get().flashInput();
   Key::get().flashInput();
 }
