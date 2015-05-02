@@ -3,6 +3,7 @@
 #include "MyLib/key.h"
 #include "MyLib/mouse.h"
 #include "System/scene_mgr.h"
+#include "cinder/Rand.h"
 
 
 class RoadApp : public AppNative {
@@ -39,6 +40,10 @@ void RoadApp::setup() {
                 static_cast<int>(WindowSize::Height));
   Mouse::get();
   Key::get();
+  Rand::randomize();
+  //gl::enableDepthRead();
+  gl::enableAlphaBlending();
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 void RoadApp::update()

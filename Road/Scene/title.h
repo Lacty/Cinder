@@ -1,13 +1,14 @@
 
 #pragma once
+#include "scene.h"
+#include "../Object/star.h"
 #include "../MyLib/common.h"
 #include <vector>
-#include "scene.h"
 
 
 class Title : public Scene {
 private:
-  std::vector<Vec3f> star;
+  Star star;
 
 public:
   Title(SceneMgr*);
