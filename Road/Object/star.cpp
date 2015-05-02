@@ -21,10 +21,13 @@ speed(speed)
 }
 
 
-void Star::update(const Vec2f& move) {
-  this->move = move;
+void Star::update(const Vec2f& move,
+                  const float& speed)
+{
+  this->move  = move;
+  this->speed = speed;
   for (auto &it : star) {
-    it.z -= speed;
+    it.z -= this->speed;
     if (it.z <= 0.0f) {
       it.z += depth;
     }

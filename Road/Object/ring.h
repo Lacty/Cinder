@@ -1,25 +1,25 @@
 
 #pragma once
-#include "../MyLib/common.h"
+#include "../Mylib/common.h"
 #include <vector>
 
 
-class Star {
+class Ring {
 private:
-  std::vector<Vec3f> star;
+  std::vector<Vec3f> ring;
   float radius;
   float depth;
   float speed;
+  float offset;
   Vec2f move;
 
+
 public:
-  Star(const int&   star_num,
+  Ring(const int& ring_num,
        const float& radius,
        const float& depth,
        const float& speed);
 
-  void update(const Vec2f& move,
-              const float& speed);
   void update();
   void draw();
 };

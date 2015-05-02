@@ -2,6 +2,7 @@
 #include "title.h"
 #include "../System/scene_mgr.h"
 #include "../MyLib/common.h"
+#include "../MyLib/mouse.h"
 #include "../MyLib/graph.h"
 #include "../MyLib/key.h"
 
@@ -15,6 +16,9 @@ star(600, 5.0f, 400.0f, 0.2f) {}
 
 void Title::update() {
   star.update();
+  if (Mouse::get().Left().isPush) {
+    mgr->shiftNextScene(std::make_shared<GameMain>(mgr));
+  }
 }
 
 void Title::draw() {
