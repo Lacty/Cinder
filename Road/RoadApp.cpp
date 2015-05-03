@@ -4,25 +4,15 @@
 #include "MyLib/mouse.h"
 #include "System/scene_mgr.h"
 #include "cinder/Rand.h"
+#include <memory>
 
 
 class RoadApp : public AppNative {
-public:
-  void setup() {
-    setWindowSize(static_cast<int>(WindowSize::Width),
-                  static_cast<int>(WindowSize::Height));
-    Mouse::get();
-    Key::get();
-    Rand::randomize();
-    //gl::enableDepthRead();
-    gl::enableAlphaBlending();
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-  }
-
 private:
-  SceneMgr scene;
+  std::shared_ptr<SceneMgr> scene;
 
 public:
+  void setup();
 
   void mouseDown(MouseEvent event) {
     Mouse::get().PushEvent(event);
@@ -46,27 +36,29 @@ public:
   void draw();
 };
 
-//void RoadApp::setup() {
-//  setWindowSize(static_cast<int>(WindowSize::Width),
-//                static_cast<int>(WindowSize::Height));
-//  Mouse::get();
-//  Key::get();
-//  Rand::randomize();
-//  //gl::enableDepthRead();
-//  gl::enableAlphaBlending();
-//  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-//}
+void RoadApp::setup() {
+  setWindowSize(static_cast<int>(WindowSize::Width),
+                static_cast<int>(WindowSize::Height));
+  Mouse::get();
+  Key::get();
+  Rand::randomize();
+  //gl::enableDepthRead();
+  gl::enableAlphaBlending();
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+  scene = std::make_shared<SceneMgr>();
+}
 
 void RoadApp::update()
 {
-  scene.update();
+  scene->update();
 }
 
 void RoadApp::draw() {
   // clear out the window with black
   gl::clear();
 
-  scene.draw();
+  scene->draw();
 
   Mouse::get().flashInput();
   Key::get().flashInput();
