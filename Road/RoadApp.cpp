@@ -7,11 +7,22 @@
 
 
 class RoadApp : public AppNative {
+public:
+  void setup() {
+    setWindowSize(static_cast<int>(WindowSize::Width),
+                  static_cast<int>(WindowSize::Height));
+    Mouse::get();
+    Key::get();
+    Rand::randomize();
+    //gl::enableDepthRead();
+    gl::enableAlphaBlending();
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+  }
+
 private:
   SceneMgr scene;
 
 public:
-  void setup();
 
   void mouseDown(MouseEvent event) {
     Mouse::get().PushEvent(event);
@@ -35,16 +46,16 @@ public:
   void draw();
 };
 
-void RoadApp::setup() {
-  setWindowSize(static_cast<int>(WindowSize::Width),
-                static_cast<int>(WindowSize::Height));
-  Mouse::get();
-  Key::get();
-  Rand::randomize();
-  //gl::enableDepthRead();
-  gl::enableAlphaBlending();
-  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-}
+//void RoadApp::setup() {
+//  setWindowSize(static_cast<int>(WindowSize::Width),
+//                static_cast<int>(WindowSize::Height));
+//  Mouse::get();
+//  Key::get();
+//  Rand::randomize();
+//  //gl::enableDepthRead();
+//  gl::enableAlphaBlending();
+//  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//}
 
 void RoadApp::update()
 {

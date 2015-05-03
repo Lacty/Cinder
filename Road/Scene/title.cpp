@@ -11,7 +11,12 @@
 
 Title::Title(SceneMgr* mgr) :
 Scene(mgr),
-star(600, 5.0f, 400.0f, 0.2f) {}
+star(600, 5.0f, 400.0f, 0.2f),
+font(new Font(loadAsset("nicomoji-plus_v0.9.ttf"),150)){}
+
+Title::~Title() {
+  delete font;
+}
 
 
 void Title::update() {
@@ -23,6 +28,6 @@ void Title::update() {
 
 void Title::draw() {
   star.draw();
-  ly::drawString("Title", Vec2f(180.0f, 150.0f),
-                 Color::white(), 150);
+  gl::drawString("Title", Vec2f(180.0f, 150.0f),
+                 Color::white(), *font);
 }

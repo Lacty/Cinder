@@ -7,9 +7,11 @@
 class Title : public Scene {
 private:
   Star star;
+  Font* font;
 
 public:
   Title(SceneMgr*);
+  ~Title();
 
   void update();
   void draw();
