@@ -8,16 +8,18 @@
 
 GameMain::GameMain(SceneMgr* mgr) :
 Scene(mgr),
-star(600, 5.0f, 400.0f, 0.2f),
-ring(50, 50.0f, 400.0f, 0.2f) {}
+star(200, 5.0f, 200.0f, 0.2f),
+bg_ring(20, 80.0f, 200.0f, 0.16f) {}
 
 
 void GameMain::update() {
   star.update();
-  ring.update();
+  bg_ring.update();
+  road.update();
 }
 
 void GameMain::draw() {
   star.draw();
-  ring.draw();
+  bg_ring.draw();
+  road.draw();
 }
