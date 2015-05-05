@@ -5,11 +5,17 @@
 
 class PlayerLean : public IObject {
 private:
-  const float angle_speed = 0.1f;
+  struct AngleStatus {
+    const float center    =  0.0f;
+    const float left_max  = -2.0f;
+    const float right_max =  2.0f;
+    const float speed     =  0.1f; 
+  } angle_status;
   float lean_angle;
 
   void leanLeft();
   void leanRight();
+  void leanCenter();
   void leanBound();
 
 public:

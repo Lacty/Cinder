@@ -16,6 +16,7 @@ private:
 
   void moveLeft();
   void moveRight();
+  void moveCenter();
   void moveBound();
 
 public:

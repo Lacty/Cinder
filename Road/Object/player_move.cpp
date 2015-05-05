@@ -31,9 +31,17 @@ void PlayerMove::moveRight() {
   pos.x += Speed;
 }
 
+void PlayerMove::moveCenter() {
+  if (Key::get().isPress(KeyEvent::KEY_a)) return;
+  if (Key::get().isPress(KeyEvent::KEY_d)) return;
+  if (lean_status != LeanStatus::Center) {
+    lean_status = LeanStatus::Center;
+  }
+}
+
 void PlayerMove::moveBound() {
-  if (pos.x < edge.left)  { pos.x += Speed; }
-  if (pos.x > edge.right) { pos.x -= Speed; }
+  if (pos.x <= edge.left)  { pos.x += Speed; }
+  if (pos.x >= edge.right) { pos.x -= Speed; }
 }
 
 

@@ -8,12 +8,14 @@ lean(std::make_shared<PlayerLean>(this)) {}
 
 
 void Player::update() {
-
+  move->update();
+  lean->update();
 }
 
 void Player::draw() {
 
 }
+
 
 Vec3f Player::getPos() const {
   return move->getPos();
