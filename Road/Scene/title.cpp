@@ -12,7 +12,7 @@
 Title::Title(SceneMgr* mgr) :
 Scene(mgr),
 star(600, 5.0f, 400.0f, 0.2f),
-font(new Font(loadAsset("nicomoji-plus_v0.9.ttf"),80)){}
+font(new Font(loadAsset("nicomoji-plus_v0.9.ttf"),80)) {}
 
 Title::~Title() {
   delete font;

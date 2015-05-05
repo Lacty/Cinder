@@ -6,16 +6,16 @@
 
 Road::Road() {
   // Rane
-  rane.push_back({ { 2, 1.5, 0 }, { 2, -1.5, 0 } }); // b-c
-  rane.push_back({ { -2, -1.5, 0 }, { -2, 1.5, 0 } }); // d-a
-  rane.push_back({ { 2, 1.5, 0.5 }, { 2, -1.5, 0.5 } }); // f-g
+  rane.push_back({ { 2, 1.5, 0 }, { 2, -1.5, 0 } });       // b-c
+  rane.push_back({ { -2, -1.5, 0 }, { -2, 1.5, 0 } });     // d-a
+  rane.push_back({ { 2, 1.5, 0.5 }, { 2, -1.5, 0.5 } });   // f-g
   rane.push_back({ { -2, -1.5, 0.5 }, { -2, 1.5, 0.5 } }); // h-e
 
   // Lines
-  lines.push_back({ { -2, 1.5, 0 }, { 2, 1.5, 0 } }); // a-b
+  lines.push_back({ { -2, 1.5, 0 }, { 2, 1.5, 0 } });     // a-b
   lines.push_back({ { -2, 1.5, 0.5 }, { 2, 1.5, 0.5 } }); // e-f
-  lines.push_back({ { -2, 1.5, 0 }, { -2, 1.5, 0.5 } }); // a-e
-  lines.push_back({ { 2, 1.5, 0 }, { 2, 1.5, 0.5 } }); // b-f
+  lines.push_back({ { -2, 1.5, 0 }, { -2, 1.5, 0.5 } });  // a-e
+  lines.push_back({ { 2, 1.5, 0 }, { 2, 1.5, 0.5 } });    // b-f
 
   for (int i = 0; i < Road_Max; ++i) {
     depth[i] = i * (200.0f / Road_Max);
