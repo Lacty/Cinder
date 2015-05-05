@@ -35,3 +35,12 @@ void PlayerMove::moveBound() {
   if (pos.x < edge.left)  { pos.x += Speed; }
   if (pos.x > edge.right) { pos.x -= Speed; }
 }
+
+
+Vec3f PlayerMove::getPos() const {
+  return pos;
+}
+
+LeanStatus PlayerMove::getLean() const {
+  return lean_status;
+}

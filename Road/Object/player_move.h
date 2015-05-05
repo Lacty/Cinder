@@ -28,5 +28,7 @@ public:
   PlayerMove(Object*);
 
   void  update();
-  Vec3f getPos();
+
+  Vec3f      getPos()  const;
+  LeanStatus getLean() const;
 };
