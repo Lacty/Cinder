@@ -1,16 +1,15 @@
 
 #pragma once
 
-class Object;
+class Player;
 
 
 class IObject {
 protected:
-
-  Object* obj;
-  IObject(Object*);
+  Player* player;
 
 public:
+  IObject(Player*);
 
   virtual void update() = 0;
 };

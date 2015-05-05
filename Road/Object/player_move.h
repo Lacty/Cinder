@@ -4,12 +4,6 @@
 #include "../MyLib/common.h"
 
 
-enum class LeanStatus {
-  Center,
-  Left,
-  Right
-};
-
 class PlayerMove : public IObject {
 private:
   struct Edge {
@@ -25,7 +19,7 @@ private:
   void moveBound();
 
 public:
-  PlayerMove(Object*);
+  PlayerMove(Player*);
 
   void  update();
 

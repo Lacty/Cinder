@@ -11,3 +11,9 @@ enum class WindowSize {
   Width  = 600,
   Height = 400
 };
+
+enum class LeanStatus {
+  Center,
+  Left,
+  Right
+};

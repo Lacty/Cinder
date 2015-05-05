@@ -3,8 +3,8 @@
 #include "../MyLib/key.h"
 
 
-PlayerMove::PlayerMove(Object* obj) :
-IObject(obj),
+PlayerMove::PlayerMove(Player* player) :
+IObject(player),
 pos(Vec3f::zero()),
 lean_status(LeanStatus::Center) {}
 

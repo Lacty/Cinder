@@ -1,7 +1,7 @@
 
 #include "Iobject.h"
-#include "object.hpp"
+#include "player.h"
 
 
-IObject::IObject(Object* obj) :
-obj(obj){}
+IObject::IObject(Player* player) :
+player(player) {}
