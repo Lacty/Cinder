@@ -27,7 +27,7 @@ void PlayerModel::update() {
 }
 
 void PlayerModel::draw() {
-  Matrix44f translate = Matrix44f::createTranslation(Vec3f(0.f, 50.f, 820.f));
+  Matrix44f translate = Matrix44f::createTranslation(Vec3f(player->getPos().x, 50.f, 820.f));
   Matrix44f scale = Matrix44f::createScale(Vec3f(10.f, -10.f, 10.f));
   Matrix44f rotate = Matrix44f::createRotation(Vec3f(-1.3f, 0.0f, angle));
 
@@ -43,8 +43,8 @@ void PlayerModel::draw() {
     begin = translate * rotate * scale * begin;
     end = translate * rotate * scale * end;
 
-    ly::drawLine(begin.xy() / (begin.z * viewing_angle) + player->getPos().xy(),
-                 end.xy() / (end.z * viewing_angle) + player->getPos().xy(),
+    ly::drawLine(begin.xy() / (begin.z * viewing_angle),
+                 end.xy() / (end.z * viewing_angle),
                  Color(0.f, 1.f, 1.f));
   }
 

@@ -7,10 +7,10 @@
 class PlayerMove : public IObject {
 private:
   struct Edge {
-    const float left  = -200.0f;
-    const float right =  200.0f;
+    const float left  = -80.0f;
+    const float right =  80.0f;
   } edge;
-  const float Speed = 2.8f;
+  const float Speed = 1.4f;
   Vec3f pos;
   LeanStatus lean_status;
 

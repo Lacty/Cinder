@@ -44,9 +44,14 @@ void Star::update() {
 }
 
 void Star::draw() {
+  gl::pushModelView();
+  gl::translate(getWindowCenter());
+
   for (auto &pos : star) {
-    ly::drawCircle(Vec2f(pos.x / pos.z + (int(WindowSize::Width) / 2) + move.x,
-                         pos.y / pos.z + (int(WindowSize::Height) / 2) + move.y),
+    ly::drawCircle(Vec2f(pos.x / pos.z + move.x,
+                         pos.y / pos.z + move.y),
                          radius / pos.z, 0, Color::white());
   }
+
+  gl::popModelView();
 }

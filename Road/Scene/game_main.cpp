@@ -8,7 +8,7 @@
 
 GameMain::GameMain(SceneMgr* mgr) :
 Scene(mgr),
-star(200, 5.0f, 200.0f, 0.2f),
+star(100, 5.0f, 200.0f, 0.2f),
 bg_ring(20, 80.0f, 200.0f, 0.16f) {}
 
 
