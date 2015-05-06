@@ -18,28 +18,22 @@ void PlayerLean::update() {
 
 void PlayerLean::leanLeft() {
   if (player->getLean() != LeanStatus::Left) return;
-  lean_angle += angle_status.speed;
+  lean_angle -= angle_status.speed;
 }
 
 void PlayerLean::leanRight() {
   if (player->getLean() != LeanStatus::Right) return;
-  lean_angle -= angle_status.speed;
+  lean_angle += angle_status.speed;
 }
 
 void PlayerLean::leanCenter() {
   if (player->getLean() != LeanStatus::Center) return;
   if (lean_angle == angle_status.center) return;
-  if (lean_angle <= angle_status.center + angle_status.left_max) {
+  if (lean_angle <= angle_status.center) {
     lean_angle += angle_status.speed;
   }
-  if (lean_angle >= angle_status.center + angle_status.right_max) {
+  if (lean_angle >= angle_status.center) {
     lean_angle -= angle_status.speed;
-  }
-  if (lean_angle >= angle_status.center + angle_status.left_max) {
-    lean_angle = angle_status.center;
-  }
-  if (lean_angle <= angle_status.center + angle_status.right_max) {
-    lean_angle = angle_status.center;
   }
 }
 

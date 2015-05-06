@@ -16,10 +16,12 @@ void GameMain::update() {
   star.update();
   bg_ring.update();
   road.update();
+  player.update();
 }
 
 void GameMain::draw() {
   star.draw();
   bg_ring.draw();
   road.draw();
+  player.draw();
 }

@@ -12,6 +12,7 @@ lean_status(LeanStatus::Center) {}
 void PlayerMove::update() {
   moveLeft();
   moveRight();
+  moveCenter();
   moveBound();
 }
 

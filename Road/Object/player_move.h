@@ -10,7 +10,7 @@ private:
     const float left  = -200.0f;
     const float right =  200.0f;
   } edge;
-  const float Speed = 4.0f;
+  const float Speed = 2.8f;
   Vec3f pos;
   LeanStatus lean_status;
 
