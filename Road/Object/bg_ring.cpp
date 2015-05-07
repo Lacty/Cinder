@@ -3,10 +3,10 @@
 #include "../MyLib/graph.h"
 
 
-BgRing::BgRing(const int& ring_num,
-           const float& radius,
-           const float& depth,
-           const float& speed) :
+BgRing::BgRing(const int&   ring_num,
+               const float& radius,
+               const float& depth,
+               const float& speed) :
 radius(radius),
 depth(depth),
 speed(speed)
@@ -29,7 +29,7 @@ void BgRing::update() {
 void BgRing::draw() {
   for (auto &pos : ring) {
     if (pos.z < 20) {
-        ly::drawStrokedCircle(pos.xy() / pos.z + getWindowCenter(),
+        ly::drawStrokedCircle(getWindowCenter(),
                               radius / pos.z,
                               40, Color::white());
     }

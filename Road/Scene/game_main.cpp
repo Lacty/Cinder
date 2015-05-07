@@ -16,6 +16,7 @@ void GameMain::update() {
   star.update();
   bg_ring.update();
   road.update();
+  boost_ring.update();
   player.update();
 }
 
@@ -23,5 +24,6 @@ void GameMain::draw() {
   star.draw();
   bg_ring.draw();
   road.draw();
+  boost_ring.draw();
   player.draw();
 }

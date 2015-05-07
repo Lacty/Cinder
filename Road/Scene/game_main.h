@@ -4,6 +4,7 @@
 #include "../Object/star.h"
 #include "../Object/bg_ring.h"
 #include "../Object/road.h"
+#include "../Object/boost_ring.h"
 #include "../Object/player.h"
 #include <vector>
 
@@ -13,6 +14,7 @@ private:
   Star star;
   BgRing bg_ring;
   Road road;
+  BoostRing boost_ring;
   Player player;
 
 public:
