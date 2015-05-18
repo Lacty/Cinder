@@ -34,7 +34,10 @@ void JsonApp::setup() {
   console() << player.speed << std::endl;
 
   // ƒf[ƒ^‘‚«ž‚Ý
+  JsonTree js_write = JsonTree::makeObject("Enemy");
+  js_write.addChild(JsonTree("name", "yanai"));
 
+  js_write.write(getAppPath() / "../../assets/Enemy.json", JsonTree::WriteOptions().createDocument());
 }
 
 void JsonApp::mouseDown(MouseEvent event) {}
