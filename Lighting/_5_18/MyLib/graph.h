@@ -73,6 +73,11 @@ namespace ly {
                        const Vec3f&  translate,
                        const Vec3f&  scale);
 
+  void drawSoildTriangle(const Vec2f& posA,
+                         const Vec2f& posB,
+                         const Vec2f& posC,
+                         const Color& color);
+
   void drawString(const std::string& str,
                   const Vec2f&       pos,
                   const ColorA&      color,

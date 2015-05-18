@@ -11,11 +11,13 @@ private:
   std::set<int> key_press;
   std::set<int> key_pull;
 
-  Key();
+  Key() = default;
 
 public:
 
   static Key& get();
+
+  void flashInput();
 
   void setKeyPush(int key_number);
   void setKeyPress(int key_number);

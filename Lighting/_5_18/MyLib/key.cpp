@@ -2,16 +2,22 @@
 #include "key.h"
 
 
-Key::Key() {}
-
 Key& Key::get() {
   static Key key;
   return key;
 }
 
 
+void Key::flashInput() {
+  key_push.clear();
+  key_pull.clear();
+}
+
+
 void Key::setKeyPush(int key_number) {
-  key_push.emplace(key_number);
+  if (key_press.find(key_number) == key_press.end()) {
+    key_push.emplace(key_number);
+  }
 }
 
 void Key::setKeyPress(int key_number) {
